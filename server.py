@@ -1,4 +1,4 @@
-from flask import Flask, jsonify
+from flask import Flask, jsonify, render_template
 from werkzeug.routing import BaseConverter
 import unicodedata
 app = Flask(__name__)
@@ -7,8 +7,8 @@ app = Flask(__name__)
 def remove_accents(input_str):
     nfkd_form = unicodedata.normalize('NFKD', input_str)
     only_ascii = nfkd_form.encode('ASCII', 'ignore')
-    frase = only_ascii.decode('utf-8')
-    return frase
+    unaccented = only_ascii.decode('utf-8')
+    return unaccented
 
 
 # lo necesitaremos para poder usar una expresion regular en el path
@@ -19,6 +19,11 @@ class RegexConverter(BaseConverter):
 
 
 app.url_map.converters['regex'] = RegexConverter
+
+
+@app.route('/', methods=['GET'])
+def index():
+    return render_template('home.html')
 
 
 @app.route('/<frase>', methods=['POST'])
