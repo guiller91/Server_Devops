@@ -15,10 +15,12 @@ Como **requisito**, el fichero donde se guardan los datos se debe persistir en 
 
 ## Instalación Flask
 
-<aside>
-🚨 Para instalar [Flask](https://flask.palletsprojects.com/en/2.0.x/) vamos a utilizar `pip3`. Así que simplemente deberemos de escribir en nuestra línea de comandos lo siguiente: `pip3 install Flask`
 
-</aside>
+🚨 Para instalar Flask vamos a utilizar `pip`. Así que simplemente deberemos de escribir en nuestra línea de comandos lo siguiente:
+```text
+  pip install Flask
+```
+
 
 ## Explicación código
 
