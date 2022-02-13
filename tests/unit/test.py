@@ -1,4 +1,4 @@
-from server import app, remove_accents
+from aplicacion.server import app, remove_accents
 import unittest
 
 
@@ -6,17 +6,6 @@ import unittest
 # coverage run -m unittest discover tests/unit
 
 class TestFlaskApi(unittest.TestCase):
-
-    def test_index(self):
-        tester = app.test_client(self)
-        response = tester.get('/', content_type='html/text')
-        status_code = response.status_code
-        self.assertEqual(status_code, 200)
-
-    def test_index_2(self):
-        tester = app.test_client(self)
-        response = tester.get('/')
-        self.assertEqual(response.content_type, "text/html; charset=utf-8")
 
     def test_add(self):
         tester = app.test_client(self)
