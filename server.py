@@ -1,7 +1,9 @@
 from flask import Flask, jsonify, render_template
 from werkzeug.routing import BaseConverter
 import unicodedata
+
 app = Flask(__name__)
+
 
 
 # Funcion para eliminar acentos
@@ -52,5 +54,3 @@ def search(palabra):
 
 if __name__ == '__main__':
     app.run(debug=True, port=12345)
-
-
