@@ -1,21 +1,6 @@
 # AD-2 Unit Test
 
-## Miembros del grupo:
-
-- [Iván Gaitán Muñoz](https://github.com/IGaitanM)
-- [Luz Maria Lozano Asimbaya](https://github.com/luzlozas)
-- [Miguel Pérez Larren](https://github.com/miguelperezlarren)
-- [Guillermo Pérez Arias](https://github.com/guiller91)
-- [Sarah Amselem Felices](https://github.com/saramselem)
-
-## Repositorio:
-
-[GitHub - guiller91/Server_Devops: Un servidor que almacena String y consulta palabras.](https://github.com/guiller91/Server_Devops)
-
-## 
-
 ## Instalación Flask, Flask-Script y Coverage
-
 
 🚨 Para instalar Flask los módulos necesarios vamos a utilizar `pip3`. Así que simplemente deberemos de escribir en nuestra línea de comandos lo siguiente, uno por uno:
 
@@ -24,7 +9,6 @@
 `pip3 install Flask-Script`
 
 `pip3 install coverage`
-
 
 
 ## Utilización de manage.py
