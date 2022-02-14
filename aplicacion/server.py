@@ -34,7 +34,7 @@ def add(frase):
 
 
 # ruta para obtener todas las frases
-@app.route('/<regex("[a-zA-Z\u00E0-\u00FC]{0,}"):palabra>/', methods=['GET'])
+@app.route('/<regex("[a-zA-Z\u00E0-\u00FC]{0,}"):palabra>', methods=['GET'])
 def search(palabra):
     palabra = remove_accents(palabra)
     dataBase = open("../bbdd.txt", "r")

@@ -22,12 +22,7 @@ class TestFlaskApi(unittest.TestCase):
         tester = app.test_client(self)
         response = tester.get('/hola')
         status_code = response.status_code
-        self.assertEqual(status_code, 308 or 200)
-
-    def test_search_2(self):
-        tester = app.test_client(self)
-        response = tester.get('/hola')
-        self.assertEqual(response.content_type, "text/html; charset=utf-8")
+        self.assertEqual(status_code,200)
 
     def test_search_fail(self):
         tester = app.test_client(self)
@@ -49,5 +44,4 @@ class TestFlaskApi(unittest.TestCase):
         self.assertEqual(remove_accents("áéíóúñÑ"), "aeiounN")
 
 
-if __name__ == "__main__":
-    unittest.main()
+
